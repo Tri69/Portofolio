@@ -1,0 +1,256 @@
+* {
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+  scroll-behavior:  smooth  ;
+}
+
+.loading {
+  position: fixed; height: 100vh;z-index: 1000;margin: 190px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #7983ff;border-radius: 50%; width: 45px;height: 45px;
+  animation: loading 0.7s linear infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.close {
+    display:  none;
+}
+.navbar-header {
+	width: 80px; 
+}
+.navbar {position:  fixed ; top: 0;right: 0;left: 0;
+	display: flex;justify-content: space-between;
+	align-items: center; padding: 15px;
+	background: white;
+	z-index: 1000;
+	box-shadow: 5px 7px 9px  rgba(0, 0, 0, .2);
+}
+.navbar-ul {
+	justify-content: space-between;display: flex;
+}
+.navbar-ul li {
+	padding: 10px;list-style: none;font-size: 23px;
+}
+.navbar-ul li a {
+	color: black;text-decoration: none;
+}
+.navbar-ul li a :hover {
+	text-decoration: underline;
+}
+.line {
+  width: 25px;
+  height: 3px;
+  margin-top: 2px;
+  background-color: #333;
+  margin-bottom: 2px;
+}
+.navbar-hamburger {
+    flex-direction: column;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 5px;
+  align-items: center;
+  z-index: 20;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, .3);
+  border: 1px solid grey;
+    display:  none;
+}
+.navbar-active {
+  background: lightgreen;
+  border-radius: 6px;
+  padding:  1px;
+}
+.cursor {
+  width: 20px;height: 20px;border-radius: 50%;z-index: 9999;
+  background:grey;position: fixed;pointer-events: none;
+  transition: all 0.1s ease;
+}
+.src1 {
+  margin: 60px;transform: rotate(-15deg);
+  width: 320px;float: left;display: flex;
+}
+.text1 {
+ margin-top: 120px; margin-left: 80px;margin-right: 40px;
+}
+.button-gambar1 {
+  border: 1px solid lightgreen; border-radius: 5px;text-align: center;
+  font-size: 23px; background: lightgreen;padding: 10px;box-shadow: 3px 2px 2px rgba(0, 0, 0, .3);
+}
+
+.src2 {
+  padding: 10px;
+  width: 450px;float:   right ;
+}
+.paragraf-text1 {
+  text-align: justify;font-size: 22px; font-family: sans-serif;
+}
+
+.section3 {
+  background: #f0ffff;
+  opacity: 0.8;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+}
+.section3 .box {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+.section3-gambar {
+  width: 90px;
+  height: 100px;
+}
+ .value-box {
+  text-align: center;
+  box-shadow: 2px 1px 2px rgba(0, 0, 0, .3);
+  width: 140px;height: 150px;background: white;
+  border-radius: 5px;
+} .section3 .box :hover {
+  box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.3);
+}
+.section4 {
+  background: white;padding: 10px;
+}
+.gambar3 {
+  width: 370px;padding: 10px;float: left;
+}
+
+.tabel1 {
+  padding: 10px;
+  text-align: center;
+  background: papayawhip;
+}
+ .tabel {
+  font-size: 20px;
+  padding: 10px;
+  border-collapse: collapse;
+ }
+ .tabel th, .tabel td {
+  padding: 7px 17px;
+ }
+ .fotoprofil {
+  width: 80px;width: 80px; border-radius: 50%;margin: 20px;
+ }
+ .profil {
+  align-items: center;
+  border: 1px solid black;
+  background: whitesmoke;
+  display: flex;
+ }
+ .container {
+  padding: 10px;
+ }
+.footer {
+  margin: 10px;
+  padding: 20px;font-family: arial;
+}
+.footer-ul {
+  display: flex; justify-content: space-between;margin: 20px;
+  border-bottom: 1px solid grey;
+}
+ .footer-list {
+  display: flex;justify-content: space-around;
+}
+.footer-list .list{
+  padding: 10px;list-style: none; justify-content: space-around;
+}
+.list  li{
+  padding: 10px; color: grey;
+  font-family: arial;font-size: 17px;
+}
+.footer-email {
+  padding: 10px;
+}
+.input-email {
+  width: 240px;border-radius: 5px;
+  height: 33px;
+  border: .3px solid grey;
+}
+.submit-email {
+  width: 100px; height: 35px;border-radius: 5px;
+  background: aliceblue;border: .3 solid grey;
+}
+.menu-footer {
+  display: flex; justify-content: space-between;
+}
+.menu-footer ul {
+  display: flex; justify-content: space-between;
+}
+.footer-foto {
+  width: 45px;
+}
+.menu-footer .footer-list-foto {
+ 
+}
+@media(max-width: 678px) {
+	.navbar {
+        padding: 10px;
+    }
+    .navbar-ul {
+        display: none;
+    }
+    .navbar-ul.open {
+    	top: 0;justify-content: right;
+    	position: fixed;
+       background: grey;
+       z-index: 20;
+       height: 95vh;
+       width: 45%;
+       justify-content: space-around;
+       align-items: center;
+       transition: 2s all;
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-ul.open.navbar-hamburger {
+    display: block;
+  }
+    .navbar-hamburger {
+    display: flex; margin-top: 5px;
+  }
+  .gambar1 {
+    display: block;justify-content: center;
+  }
+  .src1 {
+    margin-left: 50px;
+  }
+  .src2 {
+    margin-left: 50px;
+  }
+  
+.text1 {
+  text-align:   center  ;
+  margin:  20px;
+  clear: both;
+  }
+   .section3{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .text2 {
+  clear: both;
+  text-align: center;
+  margin: 0px;
+}
+.footer-ul {
+  display: block;
+}.footer-list {
+  display: block;
+}
+.paragraf-text1 {
+
+  text-align: justify;
+}
+.input-email {
+  width: 100%;margin:2px;
+}
+.submit-email {
+  width: 100%;margin: 2px;
+}
+}
